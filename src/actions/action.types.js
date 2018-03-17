@@ -1,8 +1,11 @@
 export const TYPES = {
     FETCH: {
         CLICK: 'FETCH.CLICK',
-        GETTING: 'FETCH.GETTING',
-        GOT: 'FETCH.GOT'
+        FETCHING: 'FETCH.FETCHING',
+        FETCHED: 'FETCH.FETCHED'
+    },
+    TIMER: {
+      UPDATE: 'TIMER.UPDATE'
     }
 };
 

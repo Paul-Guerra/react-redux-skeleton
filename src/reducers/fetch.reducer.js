@@ -10,14 +10,14 @@ export default (state = INITIAL_STATE, action) => {
   let result = {};
 
   switch (action.type) {
-    case ACTIONS.FETCH.GETTING:
+    case ACTIONS.FETCH.FETCHING:
         newState = {
             status: 'getting',
             results: [].concat(state.results) 
         };
         break;
 
-    case ACTIONS.FETCH.GOT:
+    case ACTIONS.FETCH.FETCHED:
         newState = {
             status: 'got',
             results: [].concat(state.results, [action.data])

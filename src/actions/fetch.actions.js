@@ -1,10 +1,9 @@
-import fetch from '../services/fetch.service';
 import ACTIONS from './action.types';
 
-export function get(url) {
+export function fetching(promise, url) {
   return {
-    type: ACTIONS.FETCH.GETTING,
-    promise: fetch(url),
+    type: ACTIONS.FETCH.FETCHING,
+    promise,
     url
   };
 }
@@ -16,9 +15,9 @@ export function click(url) {
   };
 }
 
-export function got(data) {
+export function fetched(data) {
   return {
-    type: ACTIONS.FETCH.GOT,
+    type: ACTIONS.FETCH.FETCHED,
     data
   };
 }
