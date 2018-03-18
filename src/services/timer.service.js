@@ -1,5 +1,8 @@
-export default function init(dispatch) {
-  setTimeout(dateTime(), 1000);
+export default function init(onUpdate) {
+  setTimeout(() =>{
+    onUpdate(dateTime());
+    init(onUpdate);
+  }, 1000);
 }
 
 export function dateTime(){

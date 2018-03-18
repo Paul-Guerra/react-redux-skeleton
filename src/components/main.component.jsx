@@ -7,8 +7,8 @@ import FetchPage from './fetch-page.component';
 export default function main() {
   return (
     <Switch>
-        <Route exact path='/' render={Home}/>
         <Route path='/fetch' render={FetchPage}/>
+        <Route path='/' render={Home}/>
     </Switch>
   );
 }
