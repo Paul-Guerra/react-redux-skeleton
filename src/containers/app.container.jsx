@@ -11,7 +11,6 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         onAppReady: (url) => {
-            console.log('ready!');
             dispatch(ready());
         }
     };

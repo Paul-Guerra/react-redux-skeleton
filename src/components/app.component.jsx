@@ -1,7 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Main from '../components/main.component';
+import Home from '../components/home.component';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
+import FetchPage from './fetch-page.component';
 export default class App extends React.Component {
   
   componentDidMount() {
@@ -10,9 +16,21 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Main />
-      </div>
+      <Router>
+        <div>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/fetch">Fetch</Link></li>
+          </ul>
+    
+          <hr/>
+    
+          <Route exact path="/" component={Home}/>
+          <Route path="/fetch" component={FetchPage}/>
+        </div>
+      </Router>
     )
   }
 }
+
+// routing based on https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/quick-start.md

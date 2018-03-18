@@ -6,7 +6,7 @@ export default function({status, results, onFetchClick}){
     return (
         <div>
             <div>{status}</div>
-            <a onClick={() => onFetchClick('http://localhost:3000/api/test.json')} className="fetch-request" >Fetch something</a>
+            <a href="javascript:void(0)" onClick={() => onFetchClick('http://localhost:3000/api/test.json')} className="fetch-request" >Fetch something</a>
             <ul>
                 {FetchResults(results)}
             </ul>
