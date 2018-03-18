@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 
 import FetchPage from './fetch-page.component';
+import TimerPage from './timer-page.component';
 export default class App extends React.Component {
   
   componentDidMount() {
@@ -21,12 +22,14 @@ export default class App extends React.Component {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/fetch">Fetch</Link></li>
+            <li><Link to="/timer">Timer</Link></li>
           </ul>
     
           <hr/>
     
           <Route exact path="/" component={Home}/>
           <Route path="/fetch" component={FetchPage}/>
+          <Route path="/timer" component={TimerPage}/>
         </div>
       </Router>
     )
