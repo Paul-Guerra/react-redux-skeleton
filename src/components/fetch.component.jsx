@@ -1,5 +1,4 @@
 import * as React from 'react';
-import click from '../actions/fetch.actions';
 
 export function FetchResults(results) {
   return results.map((result) => { return (<li key={result.id}>{result.description}</li>); });

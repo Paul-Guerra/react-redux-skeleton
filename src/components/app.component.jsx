@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Route,
   Link
-} from 'react-router-dom'
+} from 'react-router-dom';
 import Home from '../components/home.component';
 import FetchPage from './fetch-page.component';
 import TimerPage from './timer-page.component';
@@ -29,7 +29,7 @@ export default class App extends React.Component {
           <Route path="/timer" component={TimerPage}/>
         </div>
       </Router>
-    )
+    );
   }
 }
 

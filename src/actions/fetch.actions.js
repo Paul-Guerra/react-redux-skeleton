@@ -24,7 +24,7 @@ export function fetched(data) {
 
 export function error(e) {
   return {
-    type: ACTIONS.FETCH.FETCHED,
+    type: ACTIONS.FETCH.ERROR,
     error: e
   };
 }
