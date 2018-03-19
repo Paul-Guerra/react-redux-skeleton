@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Home from '../components/home.component';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
-
+import Home from '../components/home.component';
 import FetchPage from './fetch-page.component';
 import TimerPage from './timer-page.component';
-export default class App extends React.Component {
-  
+
+export default class App extends React.Component {  
   componentDidMount() {
     this.props.onAppReady();
   }
@@ -24,9 +23,7 @@ export default class App extends React.Component {
             <li><Link to="/fetch">Fetch</Link></li>
             <li><Link to="/timer">Timer</Link></li>
           </ul>
-    
-          <hr/>
-    
+          <hr />
           <Route exact path="/" component={Home}/>
           <Route path="/fetch" component={FetchPage}/>
           <Route path="/timer" component={TimerPage}/>

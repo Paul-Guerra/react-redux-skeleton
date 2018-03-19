@@ -9,14 +9,14 @@ export default (state = INITIAL_STATE, action) => {
 
   switch (action.type) {
     case ACTIONS.TIMER.UPDATE:
-        newState = {
-            time: action.data.toTimeString(),
-        };
-        break;
+      newState = {
+        time: action.data.toTimeString(),
+      };
+      break;
 
     default:
-        newState = Object.assign({}, state);
-        break;
+      newState = Object.assign({}, state);
+      break;
   }
 
   return newState;
