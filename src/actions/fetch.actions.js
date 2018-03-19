@@ -21,3 +21,10 @@ export function fetched(data) {
     data
   };
 }
+
+export function error(e) {
+  return {
+    type: ACTIONS.FETCH.FETCHED,
+    error: e
+  };
+}
