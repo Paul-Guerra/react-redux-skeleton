@@ -20,8 +20,17 @@ module.exports = {
   "no-unused-vars": "warn",
   "no-redeclare": "error",
   "no-console": "warn",
-  "no-unused-vars": "warn",
   "no-mixed-operators": ["error", {"allowSamePrecedence": true}],
-  "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}],
+  "react/forbid-prop-types": ["error", { "forbid": ["any"] }],
+  "import/no-extraneous-dependencies": [ "error", {
+    "devDependencies": true,
+    "optionalDependencies": false,
+    "peerDependencies": false
+  }],
+  "jsx-a11y/anchor-is-valid": [ "error", {
+    "components": [ "Link" ],
+    "specialLink": [ "to",  ],
+    "aspects": [ "noHref", "invalidHref", "preferButton" ]
+  }]
 }
 };

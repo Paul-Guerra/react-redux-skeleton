@@ -9,7 +9,7 @@ function mapStateToProps(state) {
 }
 
 // map actions you want a component to dispatch to a prop of the component
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps() {
   return {};
 }
 

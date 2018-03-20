@@ -14,7 +14,7 @@
     "watch:js": "npm run babel:watch & npm run webpack:watch",
     "webpack": "webpack",
     "webpack:watch": "webpack --watch",
-    "lint": "eslint src/**/*.js",
+    "lint": "eslint src/**/*.js*",
     "lint:watch": "watch 'npm run lint' src/"
 
   },

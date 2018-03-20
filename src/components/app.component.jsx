@@ -9,7 +9,7 @@ import Home from '../components/home.component';
 import FetchPage from './fetch-page.component';
 import TimerPage from './timer-page.component';
 
-export default class App extends React.Component {  
+export default class App extends React.Component {
   componentDidMount() {
     this.props.onAppReady();
   }
@@ -24,13 +24,17 @@ export default class App extends React.Component {
             <li><Link to="/timer">Timer</Link></li>
           </ul>
           <hr />
-          <Route exact path="/" component={Home}/>
-          <Route path="/fetch" component={FetchPage}/>
-          <Route path="/timer" component={TimerPage}/>
+          <Route exact path="/" component={Home} />
+          <Route path="/fetch" component={FetchPage} />
+          <Route path="/timer" component={TimerPage} />
         </div>
       </Router>
     );
   }
 }
+
+App.propTypes = {
+  onAppReady: PropTypes.func.isRequired
+};
 
 // routing based on https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/quick-start.md

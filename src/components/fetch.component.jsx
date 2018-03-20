@@ -1,11 +1,12 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 
 export function FetchResults(results) {
   return results.map((result) => { return (<li key={result.id}>{result.description}</li>); });
 }
 
 
-export default function ({ status, results, onFetchClick }) {
+export default function Fetch({ status, results, onFetchClick }) {
   return (
     <div>
       <div>{status}</div>
@@ -16,3 +17,9 @@ export default function ({ status, results, onFetchClick }) {
     </div>
   );
 }
+
+Fetch.propTypes = {
+  status: PropTypes.string.isRequired,
+  results: PropTypes.array.isRequired,
+  onFetchClick: PropTypes.func.isRequired
+};
