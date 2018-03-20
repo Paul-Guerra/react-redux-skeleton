@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export function FetchResults(results) {
-  return results.map((result) => { return (<li key={result.id}>{result.description}</li>); });
+  return results.map(result => (<li key={result.id}>{result.description}</li>));
 }
 
 
