@@ -7,7 +7,7 @@
     "clean": "rm -rf dist/*",
     "build": "npm run clean && npm run babel && cp src/index.html dist/index.html && npm run webpack",
     "test": "jest",
-    "test:debug": "echo  \"Visit \\033[1;34m chrome://inspect \\033[0m then wait for your \\033[1;33m debugger; \\033[0m statement to trigger\" && node --inspect-brk node_modules/.bin/jest $1",
+    "test:debug": "echo  \"Visit \\033[1;36mchrome://inspect\\033[0m then wait for your \\033[1;33mdebugger;\\033[0m statement to trigger\" && node --inspect-brk node_modules/.bin/jest $1",
     "babel": "babel src/ --out-dir dist/  --ignore *.test.js",
     "babel:watch": "babel src/ --out-dir dist/  --ignore *.test.js --watch",
     "dev": "npm run build && npm run watch:js",
