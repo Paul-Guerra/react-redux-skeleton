@@ -3,7 +3,6 @@ import update from '../timer.actions';
 import ACTIONS from '../action.types';
 
 describe('Timer actions', () => {
-
   it('dispatches an UPDATE action', () => {
     let data = { is: true };
     let action = update(data);
