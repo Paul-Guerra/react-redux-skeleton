@@ -16,8 +16,8 @@ describe('Timer middleware', () => {
   const otherAction = { type: 'SOMETHING ELSE' };
 
   afterEach(() => {
-    store.dispatch.mockReset();
-    next.mockReset();
+    store.dispatch.mockClear();
+    next.mockClear();
   });
 
   it('does nothing by default', () => {
@@ -42,8 +42,8 @@ describe('Timer makeOnUpdate ', () => {
   let dispatch = jest.fn();
 
   afterEach(() => {
-    dispatch.mockReset();
-    update.mockReset();
+    dispatch.mockClear();
+    update.mockClear();
   });
 
   it('returns a function', () => {
