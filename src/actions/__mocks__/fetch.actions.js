@@ -1,6 +1,6 @@
 /* global jest */
 
-export const fetching = jest.fn();
-export const fetched = jest.fn();
-export const error = jest.fn();
-export const click = jest.fn();
+export const fetching = jest.fn(() => 'FETCHING');
+export const fetched = jest.fn(() => 'FETCHED');
+export const error = jest.fn(() => 'ERROR');
+export const click = jest.fn(() => 'CLICK');
