@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+import fetch from 'node-fetch';
 
 export default function (url) {
   return fetch(url).then((response) => {
